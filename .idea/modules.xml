@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/JAVA.iml" filepath="$PROJECT_DIR$/.idea/JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SECAO10/SECAO10.iml" filepath="$PROJECT_DIR$/SECAO10/SECAO10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SECAO11/SECAO11.iml" filepath="$PROJECT_DIR$/SECAO11/SECAO11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SECAO5/SECAO5.iml" filepath="$PROJECT_DIR$/SECAO5/SECAO5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SECAO6/SECAO6.iml" filepath="$PROJECT_DIR$/SECAO6/SECAO6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SECAO8/SECAO8.iml" filepath="$PROJECT_DIR$/SECAO8/SECAO8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SECAO9/SECAO9.iml" filepath="$PROJECT_DIR$/SECAO9/SECAO9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SEÇÃO13/SEÇÃO13.iml" filepath="$PROJECT_DIR$/SEÇÃO13/SEÇÃO13.iml" />
+    </modules>
+  </component>
+</project>
