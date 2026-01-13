@@ -353,7 +353,7 @@ public class Main {
 
     public static void updateSavings(SavingsAccount account) {
 
-        account.setBalance(account.getBalance() * account.getInterestRate());
+        account.setBalance(account.getBalance() + (account.getBalance() * account.getInterestRate()));
     }
 }
 
