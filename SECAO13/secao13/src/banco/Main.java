@@ -107,7 +107,7 @@ public class Main {
             Integer optionAccount;
             Integer optionDeposit;
             
-            System.out.println("Qual tipo de conta você deseja cadastrar?(Digite 1 para CORRENTE ou 2 para COMERCIAL)\n");
+            System.out.println("Qual tipo de conta você deseja cadastrar?(Digite 1 para CORRENTE, 2 para COMERCIAL ou 3 para POUPANÇA)\n");
             optionAccount = sc.nextInt();
 
             System.out.print("Digite o nome da conta: ");
@@ -140,7 +140,7 @@ public class Main {
                 accounts.add(account);
             }
 
-            else {
+            else if (optionAccount == 2) {
 
                 if (balance > 0.00) {
 
@@ -153,6 +153,20 @@ public class Main {
                     BusinessAccount account = new BusinessAccount(name, balance, 0.00);
                     accounts.add(account);
                 }
+            }
+
+            else if (optionAccount == 3) {
+
+                SavingsAccount account = new SavingsAccount(name, balance, 0.5);
+                accounts.add(account);
+            }
+
+            else {
+
+                sc.nextLine();
+                System.out.println(error);
+                registerAccount();
+                return;
             }
 
             System.out.println("Conta registrada com sucesso!");
@@ -206,6 +220,12 @@ public class Main {
 
                     item.deposit(amount);
                     System.out.println("Depósito realizado com sucesso!");
+
+                    if (item instanceof SavingsAccount) {
+
+                        updateSavings((SavingsAccount) item);
+                    }
+
                     break;
                 }
             }
@@ -239,6 +259,12 @@ public class Main {
 
                     item.withdraw(amount);
                     System.out.println("Saque realizado com sucesso!");
+
+                    if (item instanceof SavingsAccount) {
+
+                        updateSavings((SavingsAccount) item);
+                    }
+
                     break;
                 }
             }
@@ -279,6 +305,12 @@ public class Main {
 
                   item.setBalance(item.getBalance() + amount);
                   find1 = true;
+
+                  if (item instanceof SavingsAccount) {
+
+                        updateSavings((SavingsAccount) item);
+                  }
+
                   break;
                 }
             }
@@ -295,6 +327,12 @@ public class Main {
 
                     item2.setBalance(item2.getBalance() - amount);
                     find2 = true;
+
+                    if (item2 instanceof SavingsAccount) {
+
+                        updateSavings((SavingsAccount) item2);
+                    }
+
                     break;
                 }
             }
@@ -311,6 +349,11 @@ public class Main {
             System.out.println(error);
             transfer();
         }
+    }
+
+    public static void updateSavings(SavingsAccount account) {
+
+        account.setBalance(account.getBalance() * account.getInterestRate());
     }
 }
 
