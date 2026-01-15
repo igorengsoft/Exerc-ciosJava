@@ -1,6 +1,6 @@
 package banco;
 
-public class BusinessAccount extends Account {
+public final class BusinessAccount extends Account {
 
     private Double loanLimit;
     
@@ -27,7 +27,7 @@ public class BusinessAccount extends Account {
     }
 
     @Override 
-    public void withdraw(double amount) {
+    public final void withdraw(double amount) {
 
         super.withdraw(balance);
         balance -= 2.0;
